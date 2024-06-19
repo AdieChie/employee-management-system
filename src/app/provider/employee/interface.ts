@@ -1,4 +1,4 @@
-import { Moment } from "moment";
+import moment, { Moment } from "moment";
 
 export interface Skill {
     name: string;
@@ -17,7 +17,7 @@ export interface Employee {
     lastName: string;
     contactNumber: string;
     emailAddress: string;
-    dateOfBirth: Moment | string;
+    dateOfBirth: string | null;
     address: Address;
     skills: Skill[];
 
@@ -29,17 +29,7 @@ export interface EmployeeAction {
     updateEmployee: (employee: Employee) => void;
     deleteEmployee: (id: string) => void;
 }
-export interface ViewEmployeeState {
-    employees: ViewEmployee[];
-    loading: boolean;
-    error: string;
-}
-export interface ViewEmployee {
-    id: string; 
-    firstName: string;
-    lastName: string;
-    contactNumber: string;
-}
+
 export interface EmployeeProviderProps {
     children: React.ReactNode;
 }

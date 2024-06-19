@@ -45,7 +45,7 @@ const EmployeeForm: React.FC<EmployeeFormProps> = ({ employee, onSave, onCancel 
     const handleAddSkill = () => {
         setFormState(prevState => ({
             ...prevState,
-            skills: [...prevState.skills, { id:'', name: '', yearsOfExperience: 0, Rating: 0 }],
+            skills: [...prevState.skills, {  name: '', yearsOfExperience: 0, Rating: 0 }],
         }));
     };
 
@@ -156,8 +156,7 @@ const EmployeeForm: React.FC<EmployeeFormProps> = ({ employee, onSave, onCancel 
                     {formState.skills.map((skill, index) => (
                         <div key={index} className={styles.skillGroup}>
                             <Form.Item
-                                name={['skills', index, 'id']}
-                                initialValue={skill.id}
+                                name={['skills', index]}
                                 style={{ display: 'none' }}
                             >
                                 <Input type="hidden" />
