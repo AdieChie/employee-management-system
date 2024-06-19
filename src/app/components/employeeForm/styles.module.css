@@ -1,0 +1,144 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: white
+}
+
+.popupContent {
+    background-color: #3a1d5f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.ant-form-item-label {
+    color: #fff;
+}
+
+.formRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formGroup {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.formGroup:last-child {
+    margin-right: 0;
+}
+
+.skillGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.skillGroup .ant-form-item {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.skillGroup .ant-form-item:last-child {
+    margin-right: 0;
+}
+
+.ant-input, .ant-select-selector, .ant-picker {
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
+    color: #fff !important;
+}
+
+.ant-input::placeholder, .ant-select-selection-placeholder, .ant-picker-input input::placeholder {
+    color: #fff !important;
+}
+
+.ant-input:hover, .ant-select-selector:hover, .ant-picker:hover {
+    border-color: #fff !important;
+}
+
+.ant-input:focus, .ant-select-selector:focus, .ant-picker:focus {
+    border-color: #fff !important;
+    box-shadow: none !important;
+}
+
+.ant-input-number, .ant-input-number-input {
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
+    color: #fff !important;
+}
+
+.ant-input-number-handler-wrap {
+    background-color: transparent !important;
+}
+
+.ant-select-dropdown {
+    background-color: #3a1d5f;
+    color: #fff;
+}
+
+.ant-select-item-option-selected {
+    background-color: #6a0dad !important;
+}
+
+.formActions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.saveButton {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.saveButton:hover {
+    background-color: #7b1fa2;
+}
+
+.cancelButton {
+    background-color: #bdbdbd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cancelButton:hover {
+    background-color: #9e9e9e;
+}
+
+.addSkillButton {
+    width: 100%;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.addSkillButton:hover {
+    border-color: #fff;
+}
