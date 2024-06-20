@@ -1,18 +1,8 @@
-html, body {
-  height: 100%; /* Ensure the html and body elements take up the full height of the viewport */
-  margin: 0;
-  padding: 0;
-}
-
 .main {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  min-height: 100vh; /* Minimum height to take up the full viewport height */
-  box-sizing: border-box; /* Ensure padding is included in the element's total height */
-  background-color: #150828; /* Optional: background color for visibility */
+  min-height: 100vh;
 }
 
 /* Enable hover only on non-touch devices */

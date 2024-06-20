@@ -106,13 +106,13 @@ const Employees: React.FC = () => {
                                 placeholder="Search" 
                                 className={styles.searchInput} 
                                 value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)} 
+                                onChange={(e) => setSearchQuery(e.target.value)} // Update search query state
                             />
-                            <input 
+                            <input  
                                 className={styles.filterInput} 
-                                placeholder="Filter"
+                                placeholder="Date of Birth"
                                 value={filterDateOfBirth}
-                                onChange={(e) => setFilterDateOfBirth(e.target.value)} 
+                                onChange={(e) => setFilterDateOfBirth(e.target.value)} // Update filter date of birth state
                             />
                             <button className={styles.newEmployeeButton} onClick={handleNewEmployeeClick}>
                                 New Employee

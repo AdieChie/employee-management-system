@@ -23,6 +23,7 @@ const EmployeeProvider: React.FC<EmployeeProviderProps> = ({ children }) => {
             dispatch(getAllEmployeesLoadingAction());
             const response = await axios.get("https://localhost:44311/api/services/app/Employee/GetEmployees");
             dispatch(getAllEmployeesAction(response.data.result));
+            message.success("All the Employees");
         } catch (error) {
             dispatch(getAllEmployeesFailedAction());
             message.error("Failed to fetch employees");

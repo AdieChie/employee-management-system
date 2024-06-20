@@ -8,7 +8,7 @@ export const employeeReducer = handleActions<IEmployeeContext, any>(
       if (action.payload) {
         return {
           ...state,
-          viewEmployee: action.payload,
+          employees: action.payload,
         };
       }
       return state;

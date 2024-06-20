@@ -1,11 +1,12 @@
 import { createContext } from 'react';
-import { Employee, EmployeeAction } from './interface';
+import { Employee, EmployeeAction, ViewEmployee } from './interface';
 
 export interface IEmployeeContext {
     employees: Employee[];
     loading: boolean;
     error: boolean;
     employee: Employee | null;
+    viewEmployee: ViewEmployee[];
 } 
 
 export const initialState: IEmployeeContext = {
@@ -13,6 +14,7 @@ export const initialState: IEmployeeContext = {
     loading: false,
     error: false,
     employee: null,
+    viewEmployee:[],
 }
 
 export const EmployeeStateContext = createContext<IEmployeeContext>(initialState);
