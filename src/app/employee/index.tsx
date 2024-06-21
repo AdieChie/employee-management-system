@@ -1,8 +1,8 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import styles from './style.module.css';
-import { useEmployeeState, useEmployeeAction } from '../provider/employee';  // Adjust the import path as needed
-import EmployeeForm from '../components/employeeForm';  // Adjust the import path as needed
+import { useEmployeeState, useEmployeeAction } from '../provider/employee';  
+import EmployeeForm from '../components/employeeForm'; 
 import { Employee } from '../provider/employee/interface';
 import { DatePicker } from 'antd';
 
@@ -11,8 +11,8 @@ const Employees: React.FC = () => {
     const { getAllEmployees, createEmployee, updateEmployee, deleteEmployee } = useEmployeeAction();
     const [showPopup, setShowPopup] = useState(false);
     const [currentEmployee, setCurrentEmployee] = useState<Employee | null>(null);
-    const [searchQuery, setSearchQuery] = useState('');  // State for search query
-    const [filterDateOfBirth, setFilterDateOfBirth] = useState('');  // State for filter date of birth
+    const [searchQuery, setSearchQuery] = useState('');  
+    const [filterDateOfBirth, setFilterDateOfBirth] = useState(''); 
 
     useEffect(() => {
         getAllEmployees();
@@ -49,14 +49,14 @@ const Employees: React.FC = () => {
 
     const handleDeleteEmployee = async (id: string) => {
         await deleteEmployee(id);
-        getAllEmployees();  // Refresh the employee list after deletion
+        getAllEmployees();  
     };
 
     const handleCancel = () => {
         setShowPopup(false);
     };
 
-    // Filter employees based on the search query and date of birth
+   
     const filteredEmployees = employees.filter(employee => {
         const matchesSearchQuery = employee.firstName.toLowerCase().includes(searchQuery.toLowerCase()) ||
             employee.lastName.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -106,13 +106,13 @@ const Employees: React.FC = () => {
                                 placeholder="Search" 
                                 className={styles.searchInput} 
                                 value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)} // Update search query state
+                                onChange={(e) => setSearchQuery(e.target.value)} 
                             />
                             <input  
                                 className={styles.filterInput} 
                                 placeholder="Date of Birth"
                                 value={filterDateOfBirth}
-                                onChange={(e) => setFilterDateOfBirth(e.target.value)} // Update filter date of birth state
+                                onChange={(e) => setFilterDateOfBirth(e.target.value)} 
                             />
                             <button className={styles.newEmployeeButton} onClick={handleNewEmployeeClick}>
                                 New Employee
